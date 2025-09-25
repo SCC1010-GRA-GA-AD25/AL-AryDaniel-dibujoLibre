@@ -16,21 +16,16 @@ function draw() {
 
   // Draw card in middle
   fill(255);
-  stroke(0);
+  stroke(50);
   strokeWeight(4);
   fill(0)
   rect(10, 10, 380, 350, 20);
 
-  
-  strokeWeight(1);
-  line(200, 10, 200, 360);
-  line(10, 185, 390, 185);
-
   // Draw Fox
   drawFox();
   
-    // Draw Lion
-    drawLion();
+  // Draw Lion
+  drawLion();
 }
 
 function centerCanvas() {
@@ -119,6 +114,69 @@ function drawFox() {
 }
 
 function drawLion() {
+  // Why I mix spanish and english? cuz I can
+  // Why "top", "left", "right", "north", "south"? cuz I can
+
+  fill(255, 170, 0); // Amarillo
+  square(200, 190, 50) // a square (to cover the space)
+  square(200, 120, 80) // a square (to cover the space)
+
+  fill(255, 155, 0); // Naranja claro
+  triangle(245, 215, 230, 190, 275, 170); // lower cheek 
+  triangle(200, 190, 230, 190, 200, 120); // septum
+  
+  fill(220, 100, 5); // Naranja oscuro
+  triangle(200, 90, 250, 90, 200, 120); // melena top
+  triangle(310, 142, 290, 180, 250, 129); // melena left
+  triangle(275, 250, 230, 300, 275, 170); // cheek melena right - first
+  triangle(245, 215, 230, 300, 275, 170); // cheek melena right - second
+  
+  fill(255, 101, 5); // Naranja intermedio
+  triangle(300, 140, 250, 90, 200, 120); // melena top-left
+  triangle(275, 230, 295, 185, 275, 160); // melena bottom-left
+  
+  
+  triangle(245, 225, 235, 275, 200, 320); // chick - north
+  triangle(245, 225, 200, 260, 200, 320); // chick - south
+  
+  fill(255)
+  triangle(215, 230, 200, 260, 200, 230); // mouth - north
+  triangle(225, 241, 200, 260, 215, 230); // mouth - south
+  triangle(200, 190, 225, 190, 200, 185); // nose
+  
+  fill(179, 120, 46) // brown dark
+  triangle(200, 190, 225, 190, 200, 210); // nose
+  triangle(220, 170, 240, 170, 260, 140); // eye
+  triangle(275, 170, 230, 190, 275, 160); // upper cheek
+  triangle(215, 230, 200, 235, 200, 230); // mouth - dark part
+  triangle(205, 230, 200, 245, 200, 230); // mouth - dark part
+
+  fill(0)
+  triangle(220, 170, 230, 190, 260, 170); // eye
+  strokeWeight(3);
+  stroke(0);     // color del punto
+    point(225, 215);
+    point(230, 205);
+    point(220, 205);
+  strokeWeight(0);
+
+  fill(80, 80, 80, 128); // 128 = 50% de transparencia (0–255)
+  noStroke();
+  beginShape();
+    vertex(200, 260);
+    vertex(242, 225);
+    vertex(245, 215);
+    vertex(275, 170);
+    vertex(275, 160); // peak
+    vertex(276, 170);
+    vertex(248, 215);
+    vertex(245, 226);
+    vertex(200, 268);
+  endShape(CLOSE);  
+  
+}
+
+function drawOldLion() {
   strokeWeight(0);
   // -------------- Melena -----------------
   fill(242, 243, 174) // blanco (nariz ojo)
