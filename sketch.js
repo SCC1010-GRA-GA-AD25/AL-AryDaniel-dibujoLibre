@@ -1,6 +1,10 @@
+let bgMusic;
+let musicStarted = false;
+
 function preload() {
   myFontRegular = loadFont("assets/IMFellEnglish-Regular.ttf");
   myFontItalic = loadFont("assets/IMFellEnglish-Italic.ttf");
+  bgMusic = loadSound("sounds/music.mp3");
 }
 
 function setup() { 
@@ -10,6 +14,12 @@ function setup() {
 }
 
 function draw() {
+  if (!musicStarted) {
+    text("Press SPACE to start the music", width / 2, height / 2);
+  } else {
+    text("Music is playing...", width / 2, height / 2);
+  }
+  
   background(31, 131, 173);
 
   drawText();
@@ -349,4 +359,11 @@ function drawOldLion() {
       vertex(244, 180);
       vertex(239, 178);
     endShape(CLOSE);
+}
+
+function keyPressed() {
+  if (!musicStarted && key === ' ') {
+    bgMusic.loop();
+    musicStarted = true;
+  }
 }
