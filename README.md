@@ -33,8 +33,14 @@ https://it.pinterest.com/pin/30610472462076498/
 [Trophy icon](https://icons8.com/icon/iMOL8BuPplly/trophy) by [Icons8](https://icons8.com)
 
 ### Music
-"music.mp3" used under the **Creative Commons Attribution license (CC BY)**.  
+"surreal_dvd-skins.mp3" used under the **Creative Commons Attribution license (CC BY)**.  
 Source: https://www.youtube.com/watch?v=Hs8rhoaixU4
+
+"dystopia.mp3" used under the **Creative Commons Attribution license (CC BY)**.  
+Source: https://www.youtube.com/watch?v=oddiRhqK6io
+
+"clubbed_to_death-Matrix_soundtrack.mp3" used under the **Creative Commons Attribution license (CC BY)**.  
+Source: https://www.youtube.com/watch?v=pFS4zYWxzNA
 
 ### Fonts
 
