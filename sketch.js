@@ -2,6 +2,9 @@ let musicSurreal, musicDystopia, musicClubbedMatrix;
 let btnSurreal, btnDystopia, btnMatrix;
 let currentSong = null;
 
+let currentVersion = "lion"; 
+let btnLion, btnOldLion;
+
 function preload() {
   myFontRegular = loadFont("assets/IMFellEnglish-Regular.ttf");
   myFontItalic = loadFont("assets/IMFellEnglish-Italic.ttf");
@@ -15,6 +18,13 @@ function setup() {
   cnv = createCanvas(400, 550);
   centerCanvas();
   
+  musicLabel = createDiv("Select music:");
+  musicLabel.position(870, 80);
+  musicLabel.style("color", "#eee");
+  musicLabel.style("font-size", "18px");
+  musicLabel.style("margin-bottom", "10px");
+  musicLabel.style("font-family", "sans-serif");
+
   btnSurreal = createButton("Surreal_dvd - Skins");
   btnSurreal.position(870, 120);
   btnSurreal.mousePressed(() => selectSong(musicSurreal));
@@ -36,17 +46,30 @@ function setup() {
     btn.style("border", "none");
     btn.style("cursor", "pointer");
   }
-
   styleButton(btnSurreal);
   styleButton(btnDystopia);
   styleButton(btnMatrix);
 
-  musicLabel = createDiv("Select music:");
-  musicLabel.position(870, 80);
-  musicLabel.style("color", "#eee");
-  musicLabel.style("font-size", "18px");
-  musicLabel.style("margin-bottom", "10px");
-  musicLabel.style("font-family", "sans-serif");
+
+  versionLabel = createP("Select version:");
+  versionLabel.position(870, 300);
+  versionLabel.style("color", "#eee");
+  versionLabel.style("font-size", "18px");
+  versionLabel.style("margin-bottom", "10px");
+  versionLabel.style("font-family", "sans-serif");
+
+  // Button for Lion
+  btnLion = createButton("Lion");
+  btnLion.position(870, 360);
+  btnLion.mousePressed(() => currentVersion = "lion");
+
+  // Button for Old Lion
+  btnOldLion = createButton("Old Lion");
+  btnOldLion.position(870, 410);
+  btnOldLion.mousePressed(() => currentVersion = "oldLion");
+
+  styleButton(btnLion);
+  styleButton(btnOldLion);
 }
 
 function draw() {
@@ -65,8 +88,12 @@ function draw() {
   // Draw Fox
   drawFox();
   
-  // Draw Lion
-  drawLion();
+  // Draw Lion  
+  if (currentVersion === "lion") {
+    drawLion();
+  } else if (currentVersion === "oldLion") {
+    drawOldLion();
+  }
 }
 
 function centerCanvas() {
