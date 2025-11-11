@@ -1,25 +1,56 @@
-let bgMusic;
-let musicStarted = false;
+let musicSurreal, musicDystopia, musicClubbedMatrix;
+let btnSurreal, btnDystopia, btnMatrix;
+let currentSong = null;
 
 function preload() {
   myFontRegular = loadFont("assets/IMFellEnglish-Regular.ttf");
   myFontItalic = loadFont("assets/IMFellEnglish-Italic.ttf");
-  bgMusic = loadSound("sounds/music.mp3");
+
+  musicSurreal = loadSound("sounds/surreal_dvd-skins.mp3");
+  musicDystopia = loadSound("sounds/dystopia.mp3");
+  musicClubbedMatrix = loadSound("sounds/clubbed_to_death-Matrix_soundtrack.mp3");
 }
 
 function setup() { 
   cnv = createCanvas(400, 550);
   centerCanvas();
   
+  btnSurreal = createButton("Surreal_dvd - Skins");
+  btnSurreal.position(870, 120);
+  btnSurreal.mousePressed(() => selectSong(musicSurreal));
+
+  btnDystopia = createButton("DYSTOPIA - DudePlaya");
+  btnDystopia.position(870, 170);
+  btnDystopia.mousePressed(() => selectSong(musicDystopia));
+
+  btnMatrix = createButton("Clubbed to Death - Matrix");
+  btnMatrix.position(870, 220);
+  btnMatrix.mousePressed(() => selectSong(musicClubbedMatrix));
+
+  function styleButton(btn) {
+    btn.style("padding", "10px 20px");
+    btn.style("font-size", "14px");
+    btn.style("border-radius", "8px");
+    btn.style("background", "#222");
+    btn.style("color", "rgb(255, 170, 0)");
+    btn.style("border", "none");
+    btn.style("cursor", "pointer");
+  }
+
+  styleButton(btnSurreal);
+  styleButton(btnDystopia);
+  styleButton(btnMatrix);
+
+  musicLabel = createDiv("Select music:");
+  musicLabel.position(870, 80);
+  musicLabel.style("color", "#eee");
+  musicLabel.style("font-size", "18px");
+  musicLabel.style("margin-bottom", "10px");
+  musicLabel.style("font-family", "sans-serif");
 }
 
 function draw() {
-  if (!musicStarted) {
-    text("Press SPACE to start the music", width / 2, height / 2);
-  } else {
-    text("Music is playing...", width / 2, height / 2);
-  }
-  
+
   background(31, 131, 173);
 
   drawText();
@@ -361,9 +392,13 @@ function drawOldLion() {
     endShape(CLOSE);
 }
 
-function keyPressed() {
-  if (!musicStarted && key === ' ') {
-    bgMusic.loop();
-    musicStarted = true;
+function selectSong(song) {
+  // If a song is already playing, stop it
+  if (currentSong && currentSong.isPlaying()) {
+    currentSong.stop();
   }
+
+  // Play the new one
+  currentSong = song;
+  currentSong.loop();
 }
