@@ -1,66 +1,60 @@
-# Welcome to p5.js
+# 🦊🦁 Fox and Lion – A p5.js Sketch
 
-You have downloaded the complete p5.js library ZIP file, yay!
+“Fox and Lion” is an artistic p5.js project inspired by Niccolò Machiavelli’s quote about wisdom and strength.
+It visualizes the duality of the fox (cunning) and the lion (power) through geometric art, animation setup, and ambient background music.
 
-# Contents of the p5 folder
+# How to Run
 
-* p5.js file
-* p5.min.js file
-* addons folder
-  * p5.sound.js
-  * p5.sound.min.js
-* empty-example folder
-  * index.html
-  * p5.js
-  * p5.sound.js
-  * sketch.js
+1. Run with Live Server or any local web server.
 
-## p5.js
+2. Press SPACE once to start the background music.
 
-This file stores the complete p5.js library. It is easy to read by humans, so feel free to open it and explore its contents. It also has a friendly error system, which helps new programmers with common user errors.
+# Author’s Note
 
-## p5.min.js
+This sketch is a tribute to strategy and instinct —
+the quiet wisdom of the fox and the roaring courage of the lion.
+It reminds us that true strength lies in knowing when to think and when to act.
 
-This file is a minified version of the p5.js file. It is a lighter version, with the same functionalities, but smaller file size. This minified version is harder to read for humans, and does not include the friendly error system.
+“One must therefore be a fox to recognize traps, and a lion to frighten wolves.”
+— Niccolò Machiavelli
 
-## addons folder
+# References & Credits
 
-The addons folder includes additional p5.js related libraries, in both original versions and minified versions.
+### Lion reference:
+https://it.pinterest.com/pin/91479436173941624/
 
-### p5.sound.js, p5.sound.min.js
+### Old Lion reference:
+https://it.pinterest.com/pin/1065875436821204949/
 
-p5.sound extends p5.js with Web Audio functionality including audio input, playback, analysis, and synthesis.
+### Fox reference:
+https://it.pinterest.com/pin/30610472462076498/
 
-## empty-example folder
+### Icon:
+[Trophy icon](https://icons8.com/icon/iMOL8BuPplly/trophy) by [Icons8](https://icons8.com)
 
-This is an empty example of a website. The folder includes the file for the website, index.html, the p5.js library, other related p5.js libraries, and a template starting point for your p5.js sketch, called sketch.js.
+### Music
+"surreal_dvd-skins.mp3" used under the **Creative Commons Attribution license (CC BY)**.  
+Source: https://www.youtube.com/watch?v=Hs8rhoaixU4
 
-### index.html
+"dystopia.mp3" used under the **Creative Commons Attribution license (CC BY)**.  
+Source: https://www.youtube.com/watch?v=oddiRhqK6io
 
-index.html is a template for an HTML file. This index.html first imports the libraries included in the folder (p5.js, p5.sound.js) then loads and executes the file sketch.js which is where you can write your own code.
+"clubbed_to_death-Matrix_soundtrack.mp3" used under the **Creative Commons Attribution license (CC BY)**.  
+Source: https://www.youtube.com/watch?v=pFS4zYWxzNA
 
-### sketch.js
+### Fonts
 
-The sketch.js is a template for the p5.js sketch, with the functions setup() and draw() that you can complete.
+IM Fell English Regular and Italic
+Available on Google Fonts
 
-## README.txt
+### AI Assistance
 
-This README file formatted with Markdown :)
-
-# What's next?
-
-If you need more information to help get you started, please refer to our website:  
-https://p5js.org/tutorials/get-started/ and https://p5js.org/tutorials/
-
-An online reference to the p5.js library is available here:  
-https://p5js.org/reference/
-
-In order to run your website (including the empty-example), you need to enable a local server, please see this tutorial in our wiki:  
-https://github.com/processing/p5.js/wiki/Local-server
-
-p5.js is a community and p5.js is built by contributions. If you want to learn more about us, visit:  
-https://p5js.org/community/
+Parts of the project — such as structure, documentation, and optimizations —
+were developed with help from ChatGPT by OpenAI.
 
 # License
 
 The p5.js library is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, version 2.1.
+
+This project incorporates the p5.js library (LGPL 2.1).
+All original code, drawings, and assets created for this project are shared for educational and non-commercial use.
